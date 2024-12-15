@@ -1,7 +1,64 @@
 <!DOCTYPE html>
 <head>
-    <title> Contact </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title> Contact US </title>
+    <link rel="icon" href="pics/logo.png" type="image/png">
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <img src="pics/logo.png" alt="Logo">
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="menu.html">Menu</a>       
+        </nav>
+    </header>
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        
+        <div class="contact-info">
+            <p><strong>Address:</strong> Dabouq, Amman, Jordan</p>
+            <p><strong>Email:</strong> info@twistandtaste.com</p>
+            <p><strong>Phone:</strong> +962 6 123 4567</p>
+        </div>
 
+        <form id="contact-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <p id="form-message" style="color: green;"></p>
+    </div>
+
+    <footer>
+        <div class="footer-left">
+            <h2>Twist & Taste </h2>
+            <ul>
+                <li>Dabouq - Amman, Jordan</li>
+                <li>© 2024 Twist & Taste - Restaurant</li>
+            </ul>
+            
+        </div>
+        <div class="footer-center">
+            <h3>Main Menu</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="menu.html">Menu</a>   </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
