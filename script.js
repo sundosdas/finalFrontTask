@@ -10,11 +10,18 @@ let currentGreetingIndex = 0;
 
 function changeGreeting() {
     const greetingElement = document.getElementById("greeting");
-    greetingElement.textContent = greetings[currentGreetingIndex];
-    currentGreetingIndex = (currentGreetingIndex + 1) % greetings.length;
+    if (greetingElement) {
+        greetingElement.textContent = greetings[currentGreetingIndex];
+        currentGreetingIndex = (currentGreetingIndex + 1) % greetings.length;
+    } else {
+        console.error("Element with id 'greeting' not found.");
+    }
 }
-setInterval(changeGreeting, 4000);
-changeGreeting();
+
+document.addEventListener('DOMContentLoaded', function () {
+    setInterval(changeGreeting, 4000);
+    changeGreeting(); // Initial call to set the first greeting immediately
+});
 
 /* MENU */
 const priceElements = document.querySelectorAll(".price");
